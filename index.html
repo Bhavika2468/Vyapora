@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101827" />
+  <title>VYAPORA — Business OS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">V</div>
+        <div><div class="brand-name">VYAPORA<span>.</span></div><div class="brand-sub">BUSINESS OS</div></div>
+      </div>
+      <div class="workspace"><span class="workspace-dot"></span><span>Sharma General Store</span><span class="chevron">⌄</span></div>
+      <div class="nav-label">WORKSPACE</div>
+      <nav class="nav">
+        <button class="nav-item active" data-page="dashboard"><span class="nav-icon">▦</span> Overview</button>
+        <button class="nav-item" data-page="voice"><span class="nav-icon">◉</span> Voice inventory <span class="nav-pill">NEW</span></button>
+        <button class="nav-item" data-page="inventory"><span class="nav-icon">▤</span> Inventory</button>
+        <button class="nav-item" data-page="orders"><span class="nav-icon">⇄</span> Orders <span class="nav-count">4</span></button>
+        <button class="nav-item" data-page="customers"><span class="nav-icon">♙</span> Customers</button>
+        <button class="nav-item" data-page="udhaar"><span class="nav-icon">₹</span> Udhaar & payments</button>
+      </nav>
+      <div class="nav-label">INTELLIGENCE</div>
+      <nav class="nav">
+        <button class="nav-item" data-page="insights"><span class="nav-icon">✧</span> Customer intelligence</button>
+        <button class="nav-item" data-page="language"><span class="nav-icon">文</span> Local language AI</button>
+        <button class="nav-item" data-page="prune"><span class="nav-icon">⌁</span> Prune AI monitor</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="help-card"><div class="help-icon">✦</div><strong>Your business, understood.</strong><p>VYAPORA turns everyday conversations into business clarity.</p><button data-page="settings" class="text-button">Configure workspace ↗</button></div>
+        <button class="profile" data-page="settings"><div class="avatar">RS</div><div><strong>Rajesh Sharma</strong><small>Store owner</small></div><span class="dots">•••</span></button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="menuToggle" aria-label="Open menu">☰</button>
+        <div class="breadcrumb">Workspace <span>/</span> <strong id="crumb">Overview</strong></div>
+        <div class="top-actions">
+          <div class="connection"><span class="live-dot"></span> Demo workspace</div>
+          <button class="icon-button" title="Notifications">♧<i></i></button>
+          <div class="top-avatar">RS</div>
+        </div>
+      </header>
+
+      <div class="content">
+        <!-- DASHBOARD -->
+        <section class="page active" id="page-dashboard">
+          <div class="page-heading">
+            <div><div class="eyebrow">SUNDAY, 15 NOVEMBER 2026</div><h1>Good morning, Rajesh <span class="wave">✦</span></h1><p>Here's what's happening with your business today.</p></div>
+            <div class="heading-actions"><button class="btn btn-light" data-page="voice">◉ Add stock by voice</button><button class="btn btn-primary" data-modal="newOrder">＋ New order</button></div>
+          </div>
+          <div class="notice"><div class="notice-icon">✦</div><div><strong>Your business pulse is ready</strong><p>Sales are up 12.8% compared with last month. You have 3 items that may need restocking.</p></div><button class="notice-link" data-page="insights">View insights ↗</button></div>
+          <div class="stats-grid">
+            <article class="stat-card"><div class="stat-top"><span>Total revenue</span><span class="stat-icon green">₹</span></div><div class="stat-value">₹48,650</div><div class="stat-foot"><span class="trend up">↗ 12.8%</span><span>vs last month</span></div><div class="sparkline green-line">▁▂▃▂▄▃▅▄▆▇</div></article>
+            <article class="stat-card"><div class="stat-top"><span>Pending udhaar</span><span class="stat-icon amber">◷</span></div><div class="stat-value">₹12,840</div><div class="stat-foot"><span class="trend down">6 customers</span><span>need attention</span></div><div class="sparkline amber-line">▂▃▂▄▃▅▄▃▅▆</div></article>
+            <article class="stat-card"><div class="stat-top"><span>Orders this month</span><span class="stat-icon blue">⇄</span></div><div class="stat-value">186</div><div class="stat-foot"><span class="trend up">↗ 8.4%</span><span>vs last month</span></div><div class="sparkline blue-line">▁▂▃▄▃▅▆▄▇█</div></article>
+            <article class="stat-card"><div class="stat-top"><span>Active customers</span><span class="stat-icon purple">♙</span></div><div class="stat-value">124</div><div class="stat-foot"><span class="trend up">+9 new</span><span>this month</span></div><div class="sparkline purple-line">▂▃▂▄▅▄▆▅▇█</div></article>
+          </div>
+          <div class="dashboard-grid">
+            <article class="panel chart-panel"><div class="panel-head"><div><h3>Revenue overview</h3><p>Your store's sales performance</p></div><select class="select-small"><option>Last 7 days</option><option>Last 30 days</option></select></div><div class="chart-total">₹18,420 <span class="trend up">↗ 8.2%</span></div><div class="chart" aria-label="Revenue chart"><div class="chart-y"><span>₹8k</span><span>₹6k</span><span>₹4k</span><span>₹2k</span><span>₹0</span></div><div class="chart-area"><div class="grid-lines"><i></i><i></i><i></i><i></i><i></i></div><svg viewBox="0 0 700 190" preserveAspectRatio="none"><defs><linearGradient id="fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#16a37b" stop-opacity=".22"/><stop offset="1" stop-color="#16a37b" stop-opacity="0"/></linearGradient></defs><path d="M0 142 C45 130 55 112 100 119 S155 88 200 101 S255 130 300 91 S360 67 400 84 S465 42 500 58 S560 78 600 34 S655 49 700 18 L700 190 L0 190Z" fill="url(#fill)"/><path d="M0 142 C45 130 55 112 100 119 S155 88 200 101 S255 130 300 91 S360 67 400 84 S465 42 500 58 S560 78 600 34 S655 49 700 18" fill="none" stroke="#159b75" stroke-width="3" vector-effect="non-scaling-stroke"/></svg><div class="chart-x"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div></div></div></article>
+            <article class="panel"><div class="panel-head"><div><h3>Inventory health</h3><p>Stock that needs your attention</p></div><button class="link-button" data-page="inventory">View all ↗</button></div><div class="stock-summary"><div class="stock-number">3 <small>low-stock items</small></div><span class="warning-chip">Needs attention</span></div><div class="stock-row"><div class="product-mini">🌾</div><div class="stock-info"><strong>Basmati Rice</strong><small>Only 2 kg left</small></div><span class="stock-level low">Low</span></div><div class="stock-row"><div class="product-mini">🛢️</div><div class="stock-info"><strong>Mustard Oil</strong><small>Only 3 litres left</small></div><span class="stock-level low">Low</span></div><div class="stock-row"><div class="product-mini">🍬</div><div class="stock-info"><strong>Sugar</strong><small>Only 4 kg left</small></div><span class="stock-level low">Low</span></div></article>
+            <article class="panel activity-panel"><div class="panel-head"><div><h3>Recent activity</h3><p>Latest updates from your store</p></div><button class="link-button" data-page="orders">See all ↗</button></div><div class="activity-list" id="activityList"><div class="activity-item"><div class="activity-avatar whatsapp">W</div><div class="activity-copy"><strong>New order from Priya Mehta</strong><p>2 kg rice, 1 litre oil · ₹340</p><small>2 minutes ago</small></div><span class="activity-status success">New</span></div><div class="activity-item"><div class="activity-avatar payment">₹</div><div class="activity-copy"><strong>Payment received from Amit</strong><p>UPI payment · ₹500</p><small>18 minutes ago</small></div><span class="activity-status success">Paid</span></div><div class="activity-item"><div class="activity-avatar stock">＋</div><div class="activity-copy"><strong>Inventory restocked</strong><p>Atta · 10 kg added</p><small>1 hour ago</small></div><span class="activity-status neutral">Stock</span></div></div></article>
+            <article class="panel assistant-panel"><div class="assistant-head"><div class="ai-orb">✦</div><div><h3>VYAPORA assistant</h3><p>Your daily business companion</p></div><span class="online-label">● Ready</span></div><div class="assistant-message"><span class="ai-label">TODAY'S SUGGESTION</span><p>Priya Mehta has ordered rice 4 times this month. Consider sending a friendly reorder reminder in a few days.</p><button class="text-button" data-page="insights">Explore customer insights ↗</button></div><div class="assistant-footer"><span>✧ AI-powered suggestion</span><span>Demo insight</span></div></article>
+          </div>
+        </section>
+
+        <!-- VOICE INVENTORY -->
+        <section class="page" id="page-voice">
+          <div class="page-heading"><div><div class="eyebrow">HANDS-FREE INVENTORY</div><h1>Voice inventory</h1><p>Speak naturally. Review the list. Confirm to update your stock.</p></div><span class="tag tag-green">Hindi · Hinglish · English</span></div>
+          <div class="voice-layout">
+            <article class="panel voice-main"><div class="voice-step"><span>01</span><div><h3>Tell VYAPORA what came into your shop</h3><p>Speak multiple products in one go, just like you normally would.</p></div></div><div class="language-select"><label for="voiceLanguage">I want to speak in</label><select id="voiceLanguage"><option value="hi-IN">Hindi (हिन्दी)</option><option value="en-IN">Hinglish / Indian English</option><option value="en-US">English</option></select></div><div class="mic-stage"><div class="sound-rings"><div class="mic-circle"><span>🎙</span></div></div><h2 id="micTitle">Ready when you are</h2><p id="micHelp">Tap the microphone and speak your stock update.</p><button class="btn btn-primary mic-button" id="recordBtn">● Start speaking</button><span class="mic-note">Your inventory will NOT change until you confirm the preview.</span></div><div class="transcript-box"><div class="transcript-head"><strong>What VYAPORA heard</strong><span class="muted" id="transcriptState">Waiting for voice input</span></div><p id="transcriptText">Your spoken words will appear here. You can also type a stock update below.</p><div class="manual-entry"><input id="voiceTextInput" placeholder="Example: aadha kilo chini, 1 kilo chawal..." /><button class="btn btn-light" id="parseTextBtn">Create preview</button></div></div></article>
+            <article class="panel voice-guide"><div class="panel-head"><div><h3>How it works</h3><p>Three simple steps</p></div></div><div class="guide-step"><div class="guide-num">1</div><div><strong>Speak naturally</strong><p>"Adha kilo chini, ek kilo chawal aur do litre tel."</p></div></div><div class="guide-step"><div class="guide-num">2</div><div><strong>Review the AI preview</strong><p>Check product names, quantities and units. Edit anything that needs correction.</p></div></div><div class="guide-step"><div class="guide-num">3</div><div><strong>Confirm inventory</strong><p>Only approved items are saved to your shop's inventory.</p></div></div><div class="privacy-note"><span>♢</span><div><strong>You stay in control</strong><p>AI prepares the list. You approve every stock change.</p></div></div><div class="voice-examples"><strong>Try saying</strong><button class="example-chip" data-example="Aadha kilo chini, ek kilo chawal aur do litre sarson ka tel">"Aadha kilo chini, ek kilo chawal..."</button><button class="example-chip" data-example="Add five packets of biscuits and ten bottles of water">"Add five packets of biscuits..."</button></div></article>
+          </div>
+          <article class="panel preview-panel hidden" id="inventoryPreview"><div class="panel-head"><div><div class="eyebrow">STEP 02 · REVIEW BEFORE SAVING</div><h3>Inventory preview</h3><p>Review and edit the items VYAPORA extracted.</p></div><span class="tag tag-amber">Awaiting confirmation</span></div><div class="table-wrap"><table><thead><tr><th>PRODUCT</th><th>QUANTITY</th><th>UNIT</th><th>TYPE</th><th></th></tr></thead><tbody id="previewRows"></tbody></table></div><div class="preview-footer"><span id="previewCount">0 products detected</span><div><button class="btn btn-light" id="cancelPreview">Discard</button> <button class="btn btn-primary" id="confirmInventory">✓ Confirm & save inventory</button></div></div></article>
+        </section>
+
+        <!-- INVENTORY -->
+        <section class="page" id="page-inventory">
+          <div class="page-heading"><div><div class="eyebrow">STOCK CONTROL</div><h1>Inventory</h1><p>Know what you have, what is running low, and what needs restocking.</p></div><div class="heading-actions"><button class="btn btn-light" data-page="voice">◉ Add by voice</button><button class="btn btn-primary" data-modal="addProduct">＋ Add product</button></div></div>
+          <div class="stats-grid compact-stats"><article class="stat-card"><div class="stat-top"><span>Total products</span><span class="stat-icon blue">▤</span></div><div class="stat-value" id="productCount">24</div><div class="stat-foot">Across your store</div></article><article class="stat-card"><div class="stat-top"><span>Low stock</span><span class="stat-icon amber">⚠</span></div><div class="stat-value">3</div><div class="stat-foot">Below reorder level</div></article><article class="stat-card"><div class="stat-top"><span>Inventory value</span><span class="stat-icon green">₹</span></div><div class="stat-value">₹32,480</div><div class="stat-foot">Estimated stock value</div></article></div>
+          <article class="panel"><div class="panel-head"><div><h3>All products</h3><p>Manage your shop's product catalogue</p></div><div class="table-actions"><input class="search-input" id="inventorySearch" placeholder="⌕ Search products..." /><select class="select-small"><option>All stock</option><option>Low stock</option></select></div></div><div class="table-wrap"><table><thead><tr><th>PRODUCT</th><th>PRICE</th><th>AVAILABLE STOCK</th><th>REORDER LEVEL</th><th>STATUS</th><th>ACTION</th></tr></thead><tbody id="inventoryRows"></tbody></table></div></article>
+        </section>
+
+        <!-- ORDERS -->
+        <section class="page" id="page-orders">
+          <div class="page-heading"><div><div class="eyebrow">SALES MANAGEMENT</div><h1>Orders</h1><p>Every customer order, organized in one place.</p></div><button class="btn btn-primary" data-modal="newOrder">＋ Create order</button></div>
+          <div class="filter-row"><button class="filter-chip active" data-filter="all">All orders <span>186</span></button><button class="filter-chip" data-filter="Pending">Pending</button><button class="filter-chip" data-filter="Confirmed">Confirmed</button><button class="filter-chip" data-filter="Completed">Completed</button></div>
+          <article class="panel"><div class="panel-head"><div><h3>Order history</h3><p>Track orders and payment status</p></div><input class="search-input" id="orderSearch" placeholder="⌕ Search orders..." /></div><div class="table-wrap"><table><thead><tr><th>ORDER ID</th><th>CUSTOMER</th><th>ITEMS</th><th>AMOUNT</th><th>PAYMENT</th><th>ORDER STATUS</th><th>DATE</th></tr></thead><tbody id="orderRows"></tbody></table></div></article>
+        </section>
+
+        <!-- CUSTOMERS -->
+        <section class="page" id="page-customers">
+          <div class="page-heading"><div><div class="eyebrow">RELATIONSHIP MANAGEMENT</div><h1>Customers</h1><p>Know your customers beyond their last purchase.</p></div><button class="btn btn-primary" data-modal="addCustomer">＋ Add customer</button></div>
+          <div class="stats-grid compact-stats"><article class="stat-card"><div class="stat-top"><span>Total customers</span><span class="stat-icon blue">♙</span></div><div class="stat-value">124</div><div class="stat-foot">Customer profiles</div></article><article class="stat-card"><div class="stat-top"><span>Repeat customers</span><span class="stat-icon green">↻</span></div><div class="stat-value">78%</div><div class="stat-foot">Purchased more than once</div></article><article class="stat-card"><div class="stat-top"><span>New this month</span><span class="stat-icon purple">＋</span></div><div class="stat-value">9</div><div class="stat-foot">Growing your community</div></article></div>
+          <article class="panel"><div class="panel-head"><div><h3>Customer directory</h3><p>Profiles, segments and recent activity</p></div><input class="search-input" id="customerSearch" placeholder="⌕ Search customers..." /></div><div class="table-wrap"><table><thead><tr><th>CUSTOMER</th><th>PHONE</th><th>TOTAL ORDERS</th><th>LIFETIME VALUE</th><th>OUTSTANDING</th><th>SEGMENT</th></tr></thead><tbody id="customerRows"></tbody></table></div></article>
+        </section>
+
+        <!-- UDHAAR -->
+        <section class="page" id="page-udhaar">
+          <div class="page-heading"><div><div class="eyebrow">CREDIT & COLLECTIONS</div><h1>Udhaar & payments</h1><p>Keep every credit transaction clear, accurate and traceable.</p></div><button class="btn btn-primary" data-modal="recordPayment">＋ Record payment</button></div>
+          <div class="stats-grid compact-stats"><article class="stat-card"><div class="stat-top"><span>Total outstanding</span><span class="stat-icon amber">₹</span></div><div class="stat-value">₹12,840</div><div class="stat-foot">Across 6 customers</div></article><article class="stat-card"><div class="stat-top"><span>Collected this month</span><span class="stat-icon green">✓</span></div><div class="stat-value">₹26,500</div><div class="stat-foot"><span class="trend up">↗ 14%</span> vs last month</div></article><article class="stat-card"><div class="stat-top"><span>Overdue accounts</span><span class="stat-icon red">!</span></div><div class="stat-value">2</div><div class="stat-foot">Need follow-up</div></article></div>
+          <article class="panel"><div class="panel-head"><div><h3>Customer balances</h3><p>Outstanding credit by customer</p></div><input class="search-input" id="udhaarSearch" placeholder="⌕ Search customer..." /></div><div class="table-wrap"><table><thead><tr><th>CUSTOMER</th><th>LAST PAYMENT</th><th>OUTSTANDING</th><th>LAST ACTIVITY</th><th>FOLLOW-UP</th><th>ACTION</th></tr></thead><tbody id="udhaarRows"></tbody></table></div></article>
+        </section>
+
+        <!-- INTELLIGENCE -->
+        <section class="page" id="page-insights">
+          <div class="page-heading"><div><div class="eyebrow">CUSTOMER INTELLIGENCE HUB</div><h1>Know your customers better</h1><p>Turn purchase history into thoughtful, useful business decisions.</p></div><span class="tag tag-purple">✧ AI-generated demo insights</span></div>
+          <div class="insight-grid"><article class="panel customer-spotlight"><div class="spotlight-top"><div class="avatar large">PM</div><div><span class="segment vip">VIP CUSTOMER</span><h2>Priya Mehta</h2><p>Customer since January 2026 · 18 orders</p></div></div><div class="spotlight-metrics"><div><strong>₹8,420</strong><small>Lifetime value</small></div><div><strong>4.2 days</strong><small>Avg. order gap</small></div><div><strong>₹0</strong><small>Outstanding</small></div></div><div class="memory-card"><div class="memory-title">✧ CUSTOMER MEMORY</div><p>Priya is a frequent customer who usually orders rice, cooking oil and household essentials. She prefers evening deliveries and consistently pays on time. Her order frequency has increased over the last month.</p></div><div class="panel-subhead">Purchase timeline</div><div class="timeline"><div><i></i><span><strong>Order #VP-1084</strong><small>2 kg rice, 1 litre oil · ₹340 · Today</small></span></div><div><i></i><span><strong>Order #VP-1068</strong><small>Atta, sugar, tea · ₹520 · 3 days ago</small></span></div><div><i></i><span><strong>Order #VP-1051</strong><small>Rice, pulses · ₹680 · 7 days ago</small></span></div></div></article><div class="insight-side"><article class="panel"><div class="panel-head"><div><h3>AI observations</h3><p>Patterns from customer activity</p></div></div><div class="observation"><span class="obs-icon green">↗</span><div><strong>Consistent buyer</strong><p>Priya orders household essentials every 4–5 days.</p></div></div><div class="observation"><span class="obs-icon purple">♡</span><div><strong>Product preference</strong><p>Rice and cooking oil appear in 72% of her orders.</p></div></div><div class="observation"><span class="obs-icon amber">◷</span><div><strong>Good payment behaviour</strong><p>No overdue payments recorded in the demo profile.</p></div></div></article><article class="panel"><div class="panel-head"><div><h3>Suggested follow-up</h3><span class="tag tag-green">Recommended</span></div></div><p class="suggestion-copy">Priya may be ready for her usual household essentials reorder.</p><button class="btn btn-primary full" data-toast="Demo reminder prepared. Connect WhatsApp backend to send it.">Prepare WhatsApp reminder ↗</button><small class="muted">Suggestions are informational, not guarantees of customer intent.</small></article></div></div>
+        </section>
+
+        <!-- LANGUAGE -->
+        <section class="page" id="page-language">
+          <div class="page-heading"><div><div class="eyebrow">BUILT FOR BHARAT</div><h1>Local language AI</h1><p>Let shopkeepers talk the way they naturally do.</p></div><span class="tag tag-purple">Roadmap + demo</span></div>
+          <div class="language-hero"><div><span class="eyebrow light">NATURAL BUSINESS CONVERSATIONS</span><h2>Not every shopkeeper thinks in English.<br><em>VYAPORA understands that.</em></h2><p>Designed for Hindi, Hinglish and the everyday vocabulary of Indian retail.</p><div class="language-tags"><span>हिन्दी</span><span>Hinglish</span><span>English</span><span>Regional languages · Future scope</span></div></div><div class="language-art">अ<span>✦</span>क</div></div>
+          <div class="two-col"><article class="panel"><div class="panel-head"><div><h3>Try a retail phrase</h3><p>See how natural language maps to business data</p></div></div><div class="phrase">"Bhaiya, aadha kilo chini aur ek kilo chawal add kar do."</div><div class="translation-result"><span class="tag tag-green">Detected intent · INVENTORY_UPDATE</span><div class="result-line"><span>Chini</span><strong>0.5 kg</strong></div><div class="result-line"><span>Chawal</span><strong>1 kg</strong></div><small class="muted">Illustrative extraction. Always review before saving.</small></div></article><article class="panel"><div class="panel-head"><div><h3>Language roadmap</h3><p>How VYAPORA can improve over time</p></div></div><div class="roadmap-item"><span class="roadmap-dot done"></span><div><strong>Hindi, Hinglish and English prompts</strong><p>Use existing multilingual AI capabilities.</p><span class="tag tag-green">Current build</span></div></div><div class="roadmap-item"><span class="roadmap-dot"></span><div><strong>Regional vocabulary dataset</strong><p>Collect consent-based, anonymized and reviewed retail phrases.</p><span class="tag tag-amber">Planned</span></div></div><div class="roadmap-item"><span class="roadmap-dot"></span><div><strong>Domain-specific model fine-tuning</strong><p>Evaluate a suitable model using the curated dataset.</p><span class="tag tag-purple">Future scope</span></div></div></article></div>
+        </section>
+
+        <!-- PRUNE -->
+        <section class="page" id="page-prune">
+          <div class="page-heading"><div><div class="eyebrow">SPECIAL TRACK · PRUNE</div><h1>AI operations monitor</h1><p>A visibility layer for AI requests, usage and reliability.</p></div><span class="tag tag-green">Demo data</span></div>
+          <div class="notice"><div class="notice-icon">⌁</div><div><strong>Prune integration panel</strong><p>This screen currently uses sample values. Connect your approved Prune integration to display real request and usage data.</p></div></div>
+          <div class="stats-grid"><article class="stat-card"><div class="stat-top"><span>AI requests today</span><span class="stat-icon purple">⌁</span></div><div class="stat-value">1,284</div><div class="stat-foot"><span class="trend up">Demo metric</span></div></article><article class="stat-card"><div class="stat-top"><span>Successful requests</span><span class="stat-icon green">✓</span></div><div class="stat-value">98.6%</div><div class="stat-foot">Illustrative success rate</div></article><article class="stat-card"><div class="stat-top"><span>Estimated AI spend</span><span class="stat-icon amber">₹</span></div><div class="stat-value">₹184.20</div><div class="stat-foot">Sample cost display</div></article><article class="stat-card"><div class="stat-top"><span>Fallback requests</span><span class="stat-icon blue">↻</span></div><div class="stat-value">18</div><div class="stat-foot">Gemini → Groq demo count</div></article></div>
+          <div class="two-col"><article class="panel"><div class="panel-head"><div><h3>AI provider activity</h3><p>Illustrative request distribution</p></div></div><div class="provider-row"><div class="provider-logo gemini">✦</div><div class="provider-copy"><strong>Google Gemini</strong><small>Primary model provider</small></div><strong>82%</strong></div><div class="meter"><span style="width:82%"></span></div><div class="provider-row"><div class="provider-logo groq">G</div><div class="provider-copy"><strong>Groq</strong><small>Fallback provider</small></div><strong>18%</strong></div><div class="meter groq-meter"><span style="width:18%"></span></div></article><article class="panel"><div class="panel-head"><div><h3>Integration checklist</h3><p>Complete these before claiming live monitoring</p></div></div><div class="check-row"><span class="check-muted">01</span><span>Confirm Prune product/API access</span><span class="tag tag-amber">To do</span></div><div class="check-row"><span class="check-muted">02</span><span>Route supported AI requests through Prune</span><span class="tag tag-amber">To do</span></div><div class="check-row"><span class="check-muted">03</span><span>Verify usage and request logs</span><span class="tag tag-amber">To do</span></div><div class="check-row"><span class="check-muted">04</span><span>Replace sample metrics with real data</span><span class="tag tag-amber">To do</span></div></article></div>
+        </section>
+
+        <!-- SETTINGS -->
+        <section class="page" id="page-settings">
+          <div class="page-heading"><div><div class="eyebrow">WORKSPACE CONFIGURATION</div><h1>Settings</h1><p>Manage your shop profile and integration status.</p></div></div>
+          <div class="settings-grid"><article class="panel settings-nav"><button class="settings-tab active">Business profile</button><button class="settings-tab">WhatsApp integration</button><button class="settings-tab">AI providers</button><button class="settings-tab">Notifications</button></article><article class="panel settings-content"><h3>Business profile</h3><p>Details shown across your VYAPORA workspace.</p><div class="form-grid"><label>Business name<input value="Sharma General Store"></label><label>Owner name<input value="Rajesh Sharma"></label><label>Phone number<input value="+91 98765 43210"></label><label>Preferred language<select><option>Hindi / Hinglish</option><option>English</option></select></label><label class="span-2">Business address<input value="Karol Bagh, New Delhi, India"></label></div><button class="btn btn-primary" data-toast="Demo settings saved locally. Connect backend to persist changes.">Save changes</button><div class="settings-divider"></div><h3>Integration status</h3><div class="integration-line"><span class="integration-icon">▣</span><div><strong>Supabase</strong><small>Database and authentication</small></div><span class="tag tag-amber">Not connected</span></div><div class="integration-line"><span class="integration-icon">W</span><div><strong>WhatsApp Cloud API</strong><small>Incoming messages and replies</small></div><span class="tag tag-amber">Not connected</span></div><div class="integration-line"><span class="integration-icon">✦</span><div><strong>AI providers / Prune</strong><small>AI processing and observability</small></div><span class="tag tag-amber">Not connected</span></div></article></div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-backdrop hidden" id="modalBackdrop"><div class="modal"><div class="modal-head"><div><span class="eyebrow">VYAPORA WORKSPACE</span><h3 id="modalTitle">Add item</h3></div><button class="close-modal" id="closeModal">×</button></div><form id="modalForm"><div id="modalFields"></div><div class="modal-actions"><button type="button" class="btn btn-light" id="cancelModal">Cancel</button><button type="submit" class="btn btn-primary">Save</button></div></form></div></div>
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
